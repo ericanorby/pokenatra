@@ -1,12 +1,22 @@
-<form action="/pokemon/<%= @pokemon.id %>" method="post">
-  <input type="hidden" name="_method" value="put">
+<h2>Edit Pok&eacute;mon</h2>
 
-  <label for="pokemon[name]">Name:</label>
-  <input name="pokemon[name]" value="<%= @pokemon.name %>">
-  <br>
-  <label for="pokemon[img_url]">Image URL:</label>
-  <input name="pokemon[img_url]" value="<%= @pokemon.img_url %>">
-  <br>
-  <br>
-  <input class="button" type="submit" value="Edit">
-</form>
+  <form action="/pokemon/<%= @pokemon.id %>" method="post">
+    <input type="hidden" name="_method" value="put">
+
+    <label for="pokemon[name]">Name:</label>
+    <input name="pokemon[name]" value="<%= @pokemon.name %>">
+    <br>
+    <label for="pokemon[img_url]">Image URL:</label>
+    <input name="pokemon[img_url]" value="<%= @pokemon.img_url %>">
+    <br>
+    <br>
+
+    <div class="show">
+
+      <form action="/pokemon" method="get">
+        <input class="button" type="submit" value="&larr; Back">
+      </form>
+
+      <input class="button" type="submit" value="Submit">
+    </div>
+  </form>
