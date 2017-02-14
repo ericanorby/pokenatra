@@ -19,7 +19,6 @@ ul {
   list-style-type: none;
 }
 
-
 body {
   /*background-image: url(../images/pokedex.png);*/
   background-attachment: fixed;
@@ -30,8 +29,24 @@ body {
   text-align: center;
 }
 
+img {
+  width: 200px;
+}
+
+.button {
+  background: rgb(55,95,200);
+  color: white;
+  font-family: arial;
+  font-size: 20px;
+  padding: 10px;
+}
+
+.show > * {
+  display: inline;
+}
+
 a:hover {
-  padding: 20px;
+  padding: 10px;
   animation: pulse 1s infinite;
 }
 .containareon, h1 {

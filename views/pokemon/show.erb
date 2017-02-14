@@ -4,3 +4,20 @@
 
 <p>TYPE: <%= @pokemon.poke_type.capitalize %></p>
 <p>CP: <%= @pokemon.cp %></p>
+
+<div class="show">
+
+  <form action="/pokemon" method="get">
+    <input class="button" type="submit" value="&larr; Back">
+  </form>
+
+  <form action="/pokemon/<%= @pokemon.id %>/edit" method="get">
+    <input class="button" type="submit" value="Edit">
+  </form>
+
+  <form action="/pokemon/<%= @pokemon.id %>" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <input class="button" type="submit" value="Set Free">
+  </form>
+
+</div>

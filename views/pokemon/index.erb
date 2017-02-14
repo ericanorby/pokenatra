@@ -1,13 +1,12 @@
-<h2>My Pokedex</h2>
+<h2>My Pok&eacute;dex</h2>
 
-<ul>
-  <% @pokemons.each do |pokemon| %>
-    <li>
-      <a href="/pokemon/<%= pokemon.id %>">
-        <%= pokemon.name %>
-      </a>
-    </li>
-  <% end %>
-</ul>
+<% @pokemons.each do |pokemon| %>
+  <a href="/pokemon/<%= pokemon.id %>"><%= pokemon.name %></a>
+  <br>
+<% end %>
 
-<a href="/pokemon/new">Add</a>
+<br>
+
+<form action="/pokemon/new" method="get">
+  <input class="button" type="submit" value="Add Pok&eacute;mon">
+</form>
