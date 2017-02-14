@@ -16,6 +16,8 @@ get "/pokemon/new" do
 end
 
 post "/pokemon" do
+  params[:pokemon][:img_url] = "http://img.pokemondb.net/artwork/#{params[:pokemon][:name].downcase}.jpg"
+  params[:pokemon][:cp] = rand(800)
   @pokemon = Pokemon.create!(params[:pokemon])
   redirect("/pokemon/#{@pokemon.id}")
 end
